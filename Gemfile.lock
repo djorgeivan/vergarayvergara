@@ -18,6 +18,17 @@ GIT
       sprockets (< 4.1)
 
 GIT
+  remote: git://github.com/drapergem/draper.git
+  revision: f6a7b17a8acfa7633762d665ab218a6478d32a98
+  specs:
+    draper (3.0.0.pre1)
+      actionpack (~> 5.0)
+      activemodel (~> 5.0)
+      activemodel-serializers-xml (~> 1.0)
+      activesupport (~> 5.0)
+      request_store (~> 1.0)
+
+GIT
   remote: git://github.com/thoughtbot/paperclip.git
   revision: 093b4da18444d883de826f58628089c2f480d461
   specs:
@@ -106,11 +117,6 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
-    draper (2.1.0)
-      actionpack (>= 3.0)
-      activemodel (>= 3.0)
-      activesupport (>= 3.0)
-      request_store (~> 1.0)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -306,7 +312,7 @@ DEPENDENCIES
   cancan
   coffee-rails (~> 4.2)
   devise
-  draper
+  draper!
   guard-bundler
   guard-livereload
   guard-rails

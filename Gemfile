@@ -17,13 +17,13 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
 gem 'devise'
 gem 'cancan' 
-gem 'draper'
+
 gem 'pundit'
 
 group :development, :test do
   gem 'byebug', platform: :mri
 end
-
+gem 'draper', github: 'drapergem/draper'
 group :development do
   
   gem 'web-console'
