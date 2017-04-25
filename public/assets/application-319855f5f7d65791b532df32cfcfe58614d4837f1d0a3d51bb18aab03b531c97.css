@@ -1,0 +1,56 @@
+/* line 1, /Users/jorge/workspace/vergarayvergara/app/assets/stylesheets/home.sass.erb */
+* {
+  margin: 0;
+}
+
+/* line 4, /Users/jorge/workspace/vergarayvergara/app/assets/stylesheets/home.sass.erb */
+.container {
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+/* line 8, /Users/jorge/workspace/vergarayvergara/app/assets/stylesheets/home.sass.erb */
+.logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* line 15, /Users/jorge/workspace/vergarayvergara/app/assets/stylesheets/home.sass.erb */
+#home {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-position: center;
+}
+
+/* line 22, /Users/jorge/workspace/vergarayvergara/app/assets/stylesheets/home.sass.erb */
+#home:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: -webkit-radial-gradient(top center, ellipse cover, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.5) 70%);
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
