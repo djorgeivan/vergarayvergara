@@ -12,19 +12,17 @@ gem 'jbuilder', '~> 2.5'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'normalize-rails'
 gem 'redcarpet', '~> 3.0.0'
-gem 'jquery-bgswitcher-rails'
 
 gem 'activeadmin', github: 'activeadmin'  
 gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
 gem 'devise'
 gem 'cancan' 
-
 gem 'pundit'
+gem 'draper', github: 'drapergem/draper'
 
 group :development, :test do
   gem 'byebug', platform: :mri
 end
-gem 'draper', github: 'drapergem/draper'
 group :development do
   
   gem 'web-console'

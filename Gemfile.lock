@@ -165,8 +165,6 @@ GEM
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
       multi_json (~> 1.2)
-    jquery-bgswitcher-rails (0.0.5)
-      railties (>= 4.0)
     jquery-rails (4.3.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -319,7 +317,6 @@ DEPENDENCIES
   guard-livereload
   guard-rails
   jbuilder (~> 2.5)
-  jquery-bgswitcher-rails
   jquery-rails
   listen (~> 3.0.5)
   normalize-rails
