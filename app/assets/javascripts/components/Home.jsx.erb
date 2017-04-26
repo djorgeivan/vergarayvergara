@@ -1,0 +1,36 @@
+class Home extends React.Component {
+
+	componentDidMount() {
+		$("#home").bgswitcher({
+  		images: [
+  			"<%= asset_path '1.jpg' %>", 
+  			"<%= asset_path '2.jpg' %>", 
+  			"<%= asset_path '3.jpg' %>"
+  		]
+		});
+	}
+
+	componentWillUnmount() {
+		$("#home").bgswitcher('destroy');
+	}
+
+	render() {
+		return(
+
+			<div id="home">
+				<div className="welcome">
+					{/*<%= image_tag 'logo-vergara.png'%>*/}
+					<h1 className="welcome-txt">Le ayudamos a encontrar su vivienda deseada</h1>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="/">Inicio</a></li>
+						<li><a href="/">Inmuebles</a></li>
+						<li><a href="/">Sobre nosotros</a></li>
+						<li><a href="/">Contacto</a></li>
+					</ul>
+				</nav>
+			</div>
+		);
+	}
+}
