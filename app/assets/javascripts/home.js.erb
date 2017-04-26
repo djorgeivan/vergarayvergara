@@ -6,4 +6,8 @@ $(document).on('ready', () => {
   				 "<%= asset_path '2.jpg' %>", 
   				 "<%= asset_path '3.jpg' %>"]
 	});
+
+	$(window).bind('beforeunload', function(){
+    $("#home").bgswitcher('destroy');
+	});
 });
