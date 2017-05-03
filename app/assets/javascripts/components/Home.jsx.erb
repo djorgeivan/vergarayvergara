@@ -1,5 +1,13 @@
 class Home extends React.Component {
 
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			toggle: false
+		}
+	}
+
 	componentDidMount() {
 		$("#home").bgswitcher({
   		images: [
@@ -14,16 +22,27 @@ class Home extends React.Component {
 		$("#home").bgswitcher('destroy');
 	}
 
+	toggleMenu() {
+		this.setState({
+			toggle: !this.state.toggle
+		});
+	}
+
+	classMenu() {
+		return (this.state.toggle) ? 'showMenu' : 'hideMenu';
+	}
+
 	render() {
 		return(
 
 			<div id="home">
+				<input type="button" className="btn" value="Button" onClick={this.toggleMenu.bind(this)}/>
 				<div className="welcome">
 					<%= image_tag 'logo.png' %>
 					<h1 className="welcome-txt">Le ayudamos a encontrar su vivienda deseada</h1>
 				</div>
 				<nav>
-					<ul>
+					<ul className={this.classMenu()}>
 						<li><a href="/">Inicio</a></li>
 						<li><a href="/">Inmuebles</a></li>
 						<li><a href="/">Sobre nosotros</a></li>
