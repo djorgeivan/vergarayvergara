@@ -2,13 +2,10 @@ class Home extends React.Component {
 
 	constructor(props) {
 		super(props);
-
-		this.state = {
-			toggle: false
-		}
+		this.state = { toggle: false } 
 	}
 
-	componentDidMount() {
+	loadSlider() {
 		$("#home").bgswitcher({
   		images: [
   			"<%= asset_path '1.jpg' %>", 
@@ -16,6 +13,15 @@ class Home extends React.Component {
   			"<%= asset_path '3.jpg' %>"
   		]
 		});
+	}
+
+	componentWillMount() {
+		return (this) ? null : this;
+		
+	}
+
+	componentDidMount() {
+		this.loadSlider();
 	}
 
 	componentWillUnmount() {
@@ -32,6 +38,15 @@ class Home extends React.Component {
 		return (this.state.toggle) ? 'showMenu' : 'hideMenu';
 	}
 
+	link(e) {
+		currentUrl = window.location.pathname;
+		currentLink = e.currentTarget.pathname;
+
+		if(currentLink == currentUrl) {
+			e.preventDefault();
+		}
+	}
+
 	render() {
 		return(
 
@@ -43,10 +58,10 @@ class Home extends React.Component {
 				</div>
 				<nav>
 					<ul className={this.classMenu()}>
-						<li><a href="/">Inicio</a></li>
-						<li><a href="/">Inmuebles</a></li>
-						<li><a href="/">Sobre nosotros</a></li>
-						<li><a href="/">Contacto</a></li>
+						<li><a onClick={this.link} href="/">inicio</a></li>
+						<li><a onClick={this.link} href="/inmuebles">Inmuebles</a></li>
+						<li><a onClick={this.link} href="/">Sobre nosotros</a></li>
+						<li><a onClick={this.link} href="/">Contacto</a></li>
 					</ul>
 				</nav>
 			</div>
