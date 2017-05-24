@@ -14,7 +14,6 @@
 * 
 	margin: 0
 
-
 #home
 	position: relative
 	background-position: center
@@ -63,7 +62,6 @@
 	margin: 1em
 	color: white
 
-
 nav
 	ul 
 		position: absolute
@@ -92,7 +90,6 @@ nav
 		font-family: 'mc'
 		font-size: 20px
 
-
 .content
 	padding: 0 4em
 
@@ -118,6 +115,16 @@ nav
 	&-2
 		width: 50%
 
+@media screen and (max-width: 768px)
+	.footer-el
+		padding: 2em .7em
+		font-size: 18px
+
+	.table-box
+		img
+			width: 260px
+		p
+			font-size: 23px
 
 @media screen and (max-width: 736px) 
 	nav 
@@ -150,5 +157,22 @@ nav
 	.welcome-txt
 		font-size: 30px
 		margin: 1em
+
+@media screen and (max-width: 414px)
+	.table-box-el
+		display: block
+	.el-2
+		width: 100%
+
+	.footer-el
+		display: block
+		font-size: 20px
+		padding: 1em 0.7em
+
+	footer
+		text-align: center
+
+	ul
+		padding: 0
 
 
