@@ -1,5 +1,4 @@
 class Home extends React.Component {
-
 	constructor(props) {
 		super(props);
 		this.state = { toggle: false } 
@@ -10,14 +9,8 @@ class Home extends React.Component {
   		images: [
   			"<%= asset_path '1.jpg' %>", 
   			"<%= asset_path '2.jpg' %>", 
-  			"<%= asset_path '3.jpg' %>"
-  		]
+  			"<%= asset_path '3.jpg' %>" ]
 		});
-	}
-
-	componentWillMount() {
-		return (this) ? null : this;
-		
 	}
 
 	componentDidMount() {
@@ -27,18 +20,17 @@ class Home extends React.Component {
 	componentWillUnmount() {
 		$("#home").bgswitcher('destroy');
 	}
-
 	toggleMenu() {
 		this.setState({
 			toggle: !this.state.toggle
 		});
 	}
 
-	classMenu() {
+	toggleClass() {
 		return (this.state.toggle) ? 'showMenu' : 'hideMenu';
 	}
 
-	link(e) {
+	handleLink(e) {
 		currentUrl = window.location.pathname;
 		currentLink = e.currentTarget.pathname;
 
@@ -49,7 +41,6 @@ class Home extends React.Component {
 
 	render() {
 		return(
-
 			<div id="home">
 				<input type="button" className="btn" value="Button" onClick={this.toggleMenu.bind(this)}/>
 				<div className="welcome">
@@ -57,11 +48,11 @@ class Home extends React.Component {
 					<h1 className="welcome-txt">Le ayudamos a encontrar su vivienda deseada</h1>
 				</div>
 				<nav>
-					<ul className={this.classMenu()}>
-						<li><a onClick={this.link} href="/">inicio</a></li>
-						<li><a onClick={this.link} href="/inmuebles">Inmuebles</a></li>
-						<li><a onClick={this.link} href="/">Sobre nosotros</a></li>
-						<li><a onClick={this.link} href="/">Contacto</a></li>
+					<ul className={this.toggleClass()}>
+						<li><a onClick={this.handleLink} href="/">inicio</a></li>
+						<li><a onClick={this.handleLink} href="/inmuebles">Inmuebles</a></li>
+						<li><a onClick={this.handleLink} href="/">Sobre nosotros</a></li>
+						<li><a onClick={this.handleLink} href="/">Contacto</a></li>
 					</ul>
 				</nav>
 			</div>
