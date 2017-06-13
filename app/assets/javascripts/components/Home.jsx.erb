@@ -4,57 +4,33 @@ class Home extends React.Component {
 		this.state = { toggle: false } 
 	}
 
-	loadSlider() {
-		$("#home").bgswitcher({
-  		images: [
-  			"<%= asset_path '1.jpg' %>", 
-  			"<%= asset_path '2.jpg' %>", 
-  			"<%= asset_path '3.jpg' %>" ]
-		});
-	}
-
 	componentDidMount() {
-		this.loadSlider();
+		$("#home").bgswitcher({
+  		images: [ "<%= asset_path '1.jpg' %>", "<%= asset_path '2.jpg' %>", "<%= asset_path '3.jpg' %>" ]
+		});
 	}
 
 	componentWillUnmount() {
 		$("#home").bgswitcher('destroy');
 	}
+
 	toggleMenu() {
 		this.setState({
 			toggle: !this.state.toggle
 		});
 	}
 
-	toggleClass() {
-		return (this.state.toggle) ? 'showMenu' : 'hideMenu';
-	}
-
-	handleLink(e) {
-		currentUrl = window.location.pathname;
-		currentLink = e.currentTarget.pathname;
-
-		if(currentLink == currentUrl) {
-			e.preventDefault();
-		}
-	}
-
 	render() {
 		return(
 			<div id="home">
-				<input type="button" className="btn" value="Button" onClick={this.toggleMenu.bind(this)}/>
 				<div className="welcome">
 					<%= image_tag 'logo.png' %>
 					<h1 className="welcome-txt">Le ayudamos a encontrar su vivienda deseada</h1>
 				</div>
-				<nav>
-					<ul className={this.toggleClass()}>
-						<li><a onClick={this.handleLink} href="/">inicio</a></li>
-						<li><a onClick={this.handleLink} href="/inmuebles">Inmuebles</a></li>
-						<li><a onClick={this.handleLink} href="/">Sobre nosotros</a></li>
-						<li><a onClick={this.handleLink} href="/">Contacto</a></li>
-					</ul>
-				</nav>
+				
+				<Menu 
+					toggleMenu={this.toggleMenu.bind(this)} 
+					toggle={this.state.toggle} />
 			</div>
 		);
 	}
