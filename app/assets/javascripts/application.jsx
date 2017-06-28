@@ -15,5 +15,7 @@
 //= require turbolinks
 //= require react
 //= require react_ujs
+//= require mustache
+//= require jquery.mustache
 //= require components
 //= require_tree .

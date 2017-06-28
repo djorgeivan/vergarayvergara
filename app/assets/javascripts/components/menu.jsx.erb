@@ -1,4 +1,4 @@
-class Menu extends React.Component {
+/*class Menu extends React.Component {
 
 	onToggleMenu() {
 		this.props.toggleMenu();
@@ -32,4 +32,23 @@ class Menu extends React.Component {
 			</div>
 		);
 	}
-}
+}*/
+
+let home = (function() {
+
+	// DOM elements
+	let $home = $("#home");
+	let $link = $home.find("#link");
+
+	function handleLink(e) {
+		currentUrl = window.location.pathname;
+		currentLink = e.currentTarget.pathname;
+
+		if(currentLink == currentUrl) {
+			e.preventDefault();
+		}
+	}
+	window.$link = $link;
+	$link.on('click', handleLink);
+	
+})();

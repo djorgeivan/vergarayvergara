@@ -12,7 +12,7 @@ gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'normalize-rails'
 gem 'redcarpet', '~> 3.0.0'
 gem 'react-rails'
-
+gem 'mustache-js-rails'
 gem 'activeadmin', github: 'activeadmin'  
 gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
 gem 'devise'

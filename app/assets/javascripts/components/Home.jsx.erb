@@ -1,4 +1,4 @@
-class Home extends React.Component {
+/*class Home extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { toggle: false } 
@@ -34,4 +34,55 @@ class Home extends React.Component {
 			</div>
 		);
 	}
-}
+}*/
+
+let home = (function() {
+
+	// DOM elements
+	let $home = $("#home");
+	let $button = $home.find("#button");
+	let $ul = $home.find("ul");
+	let $a = $home.find("a");
+	// logic
+	let toggle = false;
+
+	let images = [ "<%= asset_path '1.jpg' %>", 
+								 "<%= asset_path '2.jpg' %>", 
+								 "<%= asset_path '3.jpg' %>" ];
+
+	window.onload = function() {
+		$home.bgswitcher({ images: images });
+	}
+
+	function toggleMenu() {
+		toggle = !toggle;
+		toggleClass(toggle);
+	}
+
+	function toggleClass(tog) {
+		$ul.removeClass().addClass((tog) ? 'showMenu' : 'hideMenu');
+	}
+
+	function removeSlider(e) {
+		$home.bgswitcher("destroy");
+	}
+
+	$button.on('click', toggleMenu);
+
+	return { 
+		toggleMenu: toggleMenu
+	}
+
+})();
+
+
+
+
+
+
+
+
+
+
+
+
