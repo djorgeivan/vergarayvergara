@@ -37,8 +37,8 @@
 let home = (function() {
 
 	// DOM elements
-	let $home = $("#home");
-	let $link = $home.find("#link");
+	let $menu = $("#menu");
+	let $link = $menu.find("#link");
 
 	function handleLink(e) {
 		currentUrl = window.location.pathname;
@@ -48,7 +48,7 @@ let home = (function() {
 			e.preventDefault();
 		}
 	}
-	window.$link = $link;
+	
 	$link.on('click', handleLink);
 	
 })();
