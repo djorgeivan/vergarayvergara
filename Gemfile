@@ -19,6 +19,7 @@ gem 'devise'
 gem 'cancan' 
 gem 'pundit'
 gem 'draper', github: 'drapergem/draper'
+gem 'jquery-ui-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri

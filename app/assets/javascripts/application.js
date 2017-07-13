@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require react
 //= require react_ujs
+//= require jquery-ui
 //= require mustache
 //= require jquery.mustache
 //= require components

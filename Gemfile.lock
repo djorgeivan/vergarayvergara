@@ -332,6 +332,7 @@ DEPENDENCIES
   guard-rails
   jbuilder (~> 2.5)
   jquery-rails
+  jquery-ui-rails
   listen (~> 3.0.5)
   mustache-js-rails
   normalize-rails

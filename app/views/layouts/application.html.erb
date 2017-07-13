@@ -4,15 +4,12 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Vergarayvergara</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
   </head>
 
   <body>
     <div class="container">
-
       <nav id="menu" class="menu">
         <ul>
           <li><a id="link" href="/">inicio</a></li>
@@ -21,10 +18,8 @@
           <li><a id="link" href="/">Contacto</a></li>
         </ul>
       </nav>
-      
       <%= yield %>
       <%= render 'shared/footer' %>
     </div>
-
   </body>
 </html>
