@@ -16,6 +16,9 @@ ActiveAdmin.register Post do
 
   show do
     attributes_table do
+      row :title
+      row :price
+      row :kind
       row :images do
         ul do
           post.images.each do |image|
