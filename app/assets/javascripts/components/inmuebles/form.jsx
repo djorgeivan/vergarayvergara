@@ -29,8 +29,8 @@ class Form extends React.Component {
 		this.addSlider("slider", 1, 30, [values.priceMin, values.priceMax]);
   }
 
-	sendCriteria() {
-		this.props.setCriteria({
+	sendFilteredData() {
+		this.props.getFilteredData({
 			city: city.value,
 			neighborhood: neighborhood.value,
 			inmuebles: tipo.value,
@@ -74,7 +74,7 @@ class Form extends React.Component {
 						<div className="slider" id="slider"></div>
 					</div>
 		
-					<input type="button" value="Buscar" onClick={this.sendCriteria.bind(this)} />
+					<input type="button" value="Buscar" onClick={this.sendFilteredData.bind(this)} />
 				</form>
 			</div>
 		);

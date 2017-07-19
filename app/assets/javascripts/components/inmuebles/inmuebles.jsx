@@ -2,11 +2,11 @@ class Inmuebles extends React.Component {
 
 	constructor(props) {
 		super(props);
-
 		this.state = {
 			area: 200,
 			priceMin: 1,
 			priceMax: 30,
+			matches: []
 		}
 	}
 
@@ -23,17 +23,27 @@ class Inmuebles extends React.Component {
 		});
 	}
 
-	setCriteria(values) {
-		console.log(values);
+	getFilteredData(values) {
+		this.setState({
+			matches: this.props.posts.filter((post) => {
+				return post.neighborhood.trim() === values.neighborhood.trim();
+			})
+		});
 	}
 
-
-	getData() {
-		console.log(this.props.posts);
+	showData() {
+		if(this.state.matches.length > 0) {
+			return this.state.matches.map((post) => {
+				return <Post key={post.id} post={post} />
+			});
+		} else {
+			return this.props.posts.map((post) => {
+				return <Post key={post.id} post={post} />
+			});
+		}
 	}
 
 	render() {
-		this.getData();
 		return(
 			<div className="inmuebles">
 				<Form 
@@ -42,9 +52,9 @@ class Inmuebles extends React.Component {
 					priceMax={this.state.priceMax}
 					updatePrice={this.updatePrice.bind(this)}
 					updateArea={this.updateArea.bind(this)}
-					setCriteria={this.setCriteria.bind(this)} />
+					getFilteredData={this.getFilteredData.bind(this)} />
 				<div className="post-box">
-					
+					{(this.props.posts.length > 0) ? this.showData() : "No hay propiedades en venta"}
 				</div>
 			</div>
 		);

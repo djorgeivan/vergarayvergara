@@ -23,3 +23,6 @@
 # ignore public files
 public/assets/**
 public/uploads
+
+# editors folders
+.vscode
