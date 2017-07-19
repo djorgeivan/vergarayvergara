@@ -34,21 +34,4 @@
 	}
 }*/
 
-let home = (function() {
 
-	// DOM elements
-	let $menu = $("#menu");
-	let $link = $menu.find("#link");
-
-	function handleLink(e) {
-		currentUrl = window.location.pathname;
-		currentLink = e.currentTarget.pathname;
-
-		if(currentLink == currentUrl) {
-			e.preventDefault();
-		}
-	}
-	
-	$link.on('click', handleLink);
-	
-})();

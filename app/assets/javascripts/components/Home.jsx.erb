@@ -14,12 +14,6 @@
 		$("#home").bgswitcher('destroy');
 	}
 
-	toggleMenu() {
-		this.setState({
-			toggle: !this.state.toggle
-		});
-	}
-
 	render() {
 		return(
 			<div id="home">
@@ -27,53 +21,28 @@
 					<%= image_tag 'logo.png' %>
 					<h1 className="welcome-txt">Le ayudamos a encontrar su vivienda deseada</h1>
 				</div>
-				
-				<Menu 
-					toggleMenu={this.toggleMenu.bind(this)} 
-					toggle={this.state.toggle} />
 			</div>
 		);
 	}
 }*/
 
-let home = (function() {
+
+
+$(window.document).on('turbolinks:load', function() {
 
 	// DOM elements
 	let $home = $("#home");
-	let $button = $home.find("#button");
-	let $ul = $home.find("ul");
-	let $a = $home.find("a");
-	// logic
-	let toggle = false;
 
 	let images = [ "<%= asset_path '1.jpg' %>", 
-								 "<%= asset_path '2.jpg' %>", 
-								 "<%= asset_path '3.jpg' %>" ];
+									"<%= asset_path '2.jpg' %>", 
+									"<%= asset_path '3.jpg' %>" ];
 
-	window.onload = function() {
-		$home.bgswitcher({ images: images });
-	}
+	$home.bgswitcher({ images: images });
 
-	function toggleMenu() {
-		toggle = !toggle;
-		toggleClass(toggle);
-	}
 
-	function toggleClass(tog) {
-		$ul.removeClass().addClass((tog) ? 'showMenu' : 'hideMenu');
-	}
+});
 
-	function removeSlider(e) {
-		$home.bgswitcher("destroy");
-	}
-
-	$button.on('click', toggleMenu);
-
-	return { 
-		toggleMenu: toggleMenu
-	}
-
-})();
+	
 
 
 
