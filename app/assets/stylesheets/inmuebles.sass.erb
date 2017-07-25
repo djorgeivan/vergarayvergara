@@ -10,12 +10,73 @@
 	li a
 		color: white
 
-.inmuebles
-	width: 100%
+.wraper
+	background-color: #203959
 	display: table
+	width: 100%
+
+.flex-posts
+	margin: 0 auto
+	display: flex
+	flex-wrap: wrap
+	max-width: 910px
 
 form, .post-box
 	display: table-cell
+	vertical-align: top
+
+.post
+	background-color: white
+	position: relative
+	box-shadow: 3px 3px 0px #f2f2f2
+	border-radius: 5px
+	font-family: 'mc'
+	overflow: hidden
+	margin: 1em
+	width: 270px
+	&-img
+		overflow: hidden
+		position: relative
+		height: 240px
+	&-text
+		background-color: white
+		max-height: 90px
+	&-box
+		background-color: #f8f8f8
+		width: 100%
+		padding-top: 1em
+	&-price
+		position: absolute
+		text-align: right
+		bottom: 2em
+		color: white
+		padding: .5em 1.5em
+		width: 100%
+		right: 0
+		background-color: #E54D60
+		&-img
+			position: absolute
+			bottom: 4.8em
+			left: 2em
+			z-index: 1 
+			img
+				width: 90px
+
+
+		strong
+			margin: 0
+	h1
+		text-align: center
+		margin-top: 0
+		padding: 1em
+		font-size: 20px
+	img
+		position: absolute
+		right: 0
+		top: -1em
+		left: 0
+		text-align: center
+
 
 .form
 	&-group
@@ -32,10 +93,10 @@ form, .post-box
 	height: .2em !important
 
 form
-	background-color: #203959
 	color: white
 	padding: 2em 
-	width: 30%
+	width: 27%
+	font-size: 15px
 	text-align: center
 	font-family: 'mc'
 
@@ -62,6 +123,6 @@ form
 	input[type=button]
 		text-shadow: 0.5px 0.5px 0px black
 		background: linear-gradient(#e5e551, #fe5e5e)
-		
+		box-shadow: 1px 1px 3px black
 .post-box
-	width: 70%
+	width: 73%

@@ -1,0 +1,38 @@
+class Post extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  addDots(number) {
+   let array_number = number.toString().split("");
+    for(let i = (array_number.length - 1); i > 0 ; i--) {
+      if(i % 3 === 0) {
+        array_number.splice((i), 0, ".");
+      }
+    }
+   return array_number.join("");
+  }
+
+
+	render() {
+    let post = this.props.post;
+		return(
+      <div className="post">
+        <div className="post-text">
+          <h1>{post.title}</h1>
+        </div>
+        <div className="post-img">
+          <img src={post.images[0].thumb.url} alt=""/>
+        </div>
+
+        <div className="post-price-img">
+          <%= image_tag 'sale' %>
+        </div>
+        <div className="post-price">
+          <strong>${this.addDots(post.price)}</strong>
+        </div>
+      </div>
+		);
+	}
+}
