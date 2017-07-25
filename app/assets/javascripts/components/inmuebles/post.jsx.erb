@@ -20,7 +20,7 @@ class Post extends React.Component {
 		return(
       <div className="post">
         <div className="post-text">
-          <h1>{post.title}</h1>
+          <h1><a href={"inmuebles/" + post.id }>{post.title}</a></h1>
         </div>
         <div className="post-img">
           <img src={post.images[0].thumb.url} alt=""/>
