@@ -3,13 +3,14 @@
 	font-family: 'mc'
 	src: url('<%= asset_path('mcLight.ttf') %>') format('truetype')
 	font-style: normal
+	font-weight: bold
 	text-rendering: optimizeLegibility
 
 @font-face
 	font-family: 'quickSand'
+	src: url('<%= asset_path('Quicksand-Regular.otf') %>') format("opentype")
 	src: url('<%= asset_path('Quicksand-Light.otf') %>') format("opentype")
 	font-style: normal
-	font-weight: bold
 	text-rendering: optimizeLegibility
 * 
 	margin: 0
@@ -116,90 +117,8 @@ nav
 	&-2
 		width: 50%
 
-@media screen and (max-width: 768px)
-	.footer-el
-		padding: 2em .7em
-		font-size: 18px
-
-	.table-box
-		img
-			width: 260px
-		p
-			font-size: 18px
-
-@media screen and (max-width: 736px) 
-	nav 
-		display: table
-		ul
-			display: table-cell
-			position: absolute
-			right: 0
-			width: 200px
-			transition: all 1s ease
-		li
-			display: block
-
-	.table-box img 
-		width: 230px
-
-	.footer-el 
-		padding: 2em 0.1em
-
-	#home, #home:before
-		height: 500px
-
-	.btn
-		display: block
-		z-index: 1
-
-	.hideMenu
-		top: -20em
-
-	.showMenu
-		top: 0
-		background: rgba(0,0,0, .5)
-		height: 100%
-		width: 100%
-
-	.welcome
-		max-width: 500px
-		top: 9.5em
-
-	.welcome-txt
-		font-size: 30px
-		margin: 1em
-
-	.table-box p 
-		font-size: 18px
-		padding: 2em 0
-
-@media screen and (max-width: 414px)
-	.table-box-el
-		display: block
-	.el-2
-		width: 100%
-
-	.footer-el
-		display: block
-		font-size: 20px
-		padding: 1em 0.7em
-
-	.table-box p 
-		font-size: 18px
-		text-align: center
-		padding-top: 1em
-
-
-	.welcome-txt
-		font-size: 30px
-		margin-right: 1em
-		margin-left: 1em
-		text-transform: lowercase
-
-	footer
-		text-align: center
-
-	ul
-		padding: 0
+@import inmuebles
+@import shared
+@import media
 
 
