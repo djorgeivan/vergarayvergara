@@ -12,10 +12,12 @@
     <div class="container">
       <nav id="menu" class="menu">
         <ul>
+          <%= image_tag 'logo', class: 'logotop' %> 
           <li><a id="link" href="/">inicio</a></li>
           <li><a id="link" href="/inmuebles">Inmuebles</a></li>
           <li><a id="link" href="/">Sobre nosotros</a></li>
           <li><a id="link" href="/">Contacto</a></li>
+          <li id="formbtn">Form</li>
         </ul>
       </nav>
       <%= yield %>

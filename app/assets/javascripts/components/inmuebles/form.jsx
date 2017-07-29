@@ -46,8 +46,8 @@ class Form extends React.Component {
 
 	render() {
 		return(
-			<div>
-				<form className="form">
+			<div className="form">
+				<form className="form-box">
 					<h3>Filtros</h3>
 
 					<div className="form-group">

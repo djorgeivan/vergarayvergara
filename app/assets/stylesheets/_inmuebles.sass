@@ -6,12 +6,12 @@
 .menu
 	ul 
 		position: relative
-		background: #404040
+		background: #354455
 	li a
 		color: white
 
 .wraper
-	background-color: #203959
+	background-color: #dfdfdf
 	display: table
 	width: 100%
 
@@ -19,6 +19,7 @@
 	margin: 0 auto
 	display: flex
 	flex-wrap: wrap
+	justify-content: center
 	max-width: 910px
 
 form, .post-box
@@ -106,21 +107,23 @@ form, .post-box
 
 
 .form
+	overflow: hidden
 	&-group
 		margin-bottom: 3em
 		height: 4em
 	&-box
-		background-color: #8C8C8C
 		padding-top: 2em
 		width: 100%
 
+.hideForm
+	height: 1px
 
 .slider
 	overflow: hidden
 	height: .2em !important
 
 form
-	color: white
+	color: black
 	padding: 2em 
 	width: 27%
 	font-size: 15px
@@ -148,8 +151,8 @@ form
 		border: none
 
 	input[type=button]
-		text-shadow: 0.5px 0.5px 0px black
-		background: linear-gradient(#e5e551, #fe5e5e)
-		box-shadow: 1px 1px 3px black
+		color: white
+		background: linear-gradient(#cacaca, #b6b6b6)
+		box-shadow: 1px 1px 5px #c2c2c2
 .post-box
 	width: 73%
