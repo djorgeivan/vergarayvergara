@@ -4,15 +4,13 @@
 	.post-box
 		width: 65%
 	
-
-
 @media screen and (max-width: 768px)
 	.footer-el
 		padding: 2em .7em
 		font-size: 18px
 
-	nav li:last-child
-		display: inline
+	.menu li:last-child
+		display: inline-block
 
 	.form
 		max-width: 500px
@@ -36,6 +34,10 @@
 			font-size: 18px
 
 @media screen and (max-width: 736px) 
+
+	.menu li:nth-child(6)
+		display: inline-block
+
 	nav 
 		display: table
 		ul
@@ -81,7 +83,23 @@
 		font-size: 18px
 		padding: 2em 0
 
+	.dropdown
+		position: absolute
+		top: -230px
+		transition: 1s ease		
+
+	.hideMenu2
+		top: -230px
+
+	.showMenu2
+		top: 0
+
+	.menu
+		width: 100%
+
 @media screen and (max-width: 414px)
+
+
 	.table-box-el
 		display: block
 	.el-2

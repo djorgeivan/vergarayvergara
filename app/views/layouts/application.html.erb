@@ -10,18 +10,21 @@
 
   <body>
     <div class="container">
-      <nav id="menu" class="menu">
-        <ul>
-          <%= image_tag 'logo.png', class: 'logotop' %>
-          <li><a id="link" href="/">inicio</a></li>
-          <li><a id="link" href="/inmuebles">Inmuebles</a></li>
-          <li><a id="link" href="/">Sobre nosotros</a></li>
-          <li><a id="link" href="/">Contacto</a></li>
-          <li id="formbtn">Form</li>
-        </ul>
-      </nav>
-      <%= yield %>
-      <%= render 'shared/footer' %>
+      <div id="dropdown" class="dropdown">
+        <nav id="menu" class="menu">
+          <ul>
+            <%= image_tag 'logo.png', class: 'logotop' %>
+            <li><a id="link" href="/">inicio</a></li>
+            <li><a id="link" href="/inmuebles">Inmuebles</a></li>
+            <li><a id="link" href="/">Sobre nosotros</a></li>
+            <li><a id="link" href="/">Contacto</a></li>
+            <li id="menubtn" class="btns-btn">Menu</li>
+            <li id="formbtn" class="btns-btn">Form</li>
+          </ul>
+        </nav>
+        <%= yield %>
+        <%= render 'shared/footer' %>
+      </div>
     </div>
   </body>
 </html>

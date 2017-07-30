@@ -4,11 +4,27 @@
 
 
 .menu
+	transition: 1s ease
 	ul 
 		position: relative
 		background: #354455
-	li a
+	li a, li p
 		color: white
+
+	li:nth-child(6)
+		display: none
+
+	li:last-child
+		display: none
+
+
+.btns
+	&-btn
+		display: inline-block
+		color: white
+		padding-left: 1em
+		padding-right: 1em
+		
 
 .wraper
 	background-color: #dfdfdf
