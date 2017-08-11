@@ -19,4 +19,7 @@
 //= require mustache
 //= require jquery.mustache
 //= require components
+//= require Dropbox
 //= require_tree .
+
+new Dropbox();

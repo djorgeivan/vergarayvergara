@@ -62,7 +62,6 @@ form, .post-box
 		position: absolute
 		padding-top: 1em
 		color: #565656
-		padding-left: 1em
 		font-family: Arial, Helvetica, sans-serif
 		top: 0em
 		z-index: 1
@@ -80,7 +79,14 @@ form, .post-box
 	&-img
 		overflow: hidden
 		position: relative
+		text-align: center
 		height: 240px
+		img
+			position: absolute
+			width: 20em
+			right: 0
+			left: 0
+	
 	&-text
 		background-color: white
 		max-height: 90px
@@ -105,6 +111,11 @@ form, .post-box
 			z-index: 3 
 			img
 				width: 90px
+				position: absolute
+				right: 0
+				top: -1em
+				left: 0
+				text-align: center
 
 
 		strong
@@ -114,13 +125,6 @@ form, .post-box
 		margin-top: 0
 		padding: 1em
 		font-size: 20px
-	img
-		position: absolute
-		right: 0
-		top: -1em
-		left: 0
-		text-align: center
-
 
 .form
 	overflow: hidden

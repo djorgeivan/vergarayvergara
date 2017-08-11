@@ -21,9 +21,6 @@ gem 'pundit'
 gem 'draper', github: 'drapergem/draper'
 gem 'jquery-ui-rails'
 
-gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
-gem "mini_magick"
-
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'

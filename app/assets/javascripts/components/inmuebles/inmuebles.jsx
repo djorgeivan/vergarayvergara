@@ -16,6 +16,7 @@ class Inmuebles extends React.Component {
 	}
 
 	showData() {
+		console.log(this.props.posts);
 		if(this.state.matches.length > 0) {
 			return this.state.matches.map((post) => {
 				return <Post key={post.id} post={post} />

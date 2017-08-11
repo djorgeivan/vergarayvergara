@@ -4,7 +4,6 @@ ActiveAdmin.register Post do
 #
   permit_params :title, :neighborhood, :area, :price, :details, :phone, :landline, :kind, images: []
 
-
   index do 
     column :title
     column :price do |post|
@@ -19,26 +18,16 @@ ActiveAdmin.register Post do
       row :title
       row :price
       row :kind
-      row :images do
-        ul do
-          post.images.each do |image|
-            li do
-              image_tag(image.url(:thumb))
-            end
-          end
-        end
-      end
     end
 
     active_admin_comments
   end
 
-
-
+  
   form do |f|
     f.inputs "Admin Details" do
       f.input :title
-      f.input :images, as: :file, input_html: { multiple: true }
+      f.input :images, input_html: { multiple: true, id: "dropbox" } 
       f.input :kind, as: :select, :selected => "Casas",  :collection => ["Casas", "Apartamentos", "Lotes", "Fincas", "Bodegas"]
       f.input :neighborhood
       f.input :area

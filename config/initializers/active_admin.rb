@@ -200,7 +200,7 @@ ActiveAdmin.setup do |config|
   #
   # To load a javascript file:
   #   config.register_javascript 'my_javascript.js'
-
+  config.register_javascript 'Dropbox.js'
   # == CSV options
   #
   # Set the CSV builder separator
@@ -290,4 +290,7 @@ ActiveAdmin.setup do |config|
   # You can inherit it with own class and inject it for all resources
   #
   # config.order_clause = MyOrderClause
+
+  # Since it's not currently possible I overrote the whole activeadmin base.rb just to add a script in the head tag
+  # It is based on this model: https://github.com/activeadmin/activeadmin/blob/master/lib/active_admin/views/pages/base.rb
 end
