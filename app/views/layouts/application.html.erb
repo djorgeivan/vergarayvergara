@@ -19,7 +19,9 @@
             <li><a id="link" href="/">Sobre nosotros</a></li>
             <li><a id="link" href="/">Contacto</a></li>
             <li id="menubtn" class="btns-btn">Menu</li>
-            <li id="formbtn" class="btns-btn">Form</li>
+            <% if controller.action_name == "index" %>
+              <li id="formbtn" class="btns-btn">Form</li>
+            <% end %>
           </ul>
         </nav>
         <%= yield %>

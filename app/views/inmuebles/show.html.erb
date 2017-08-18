@@ -1,3 +1,14 @@
-<h3><%= @post.title %></h3>
 
-<%= @post.price %>
+<div class="fill dark">
+  <div class="center center-el">
+    <div class="fade">
+      <% split(@post).each do |image_link| %>
+        <div><%= image_tag image_link, class: "slider-img" %></div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+

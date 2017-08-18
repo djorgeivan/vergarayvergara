@@ -19,7 +19,5 @@
 //= require mustache
 //= require jquery.mustache
 //= require components
-//= require Dropbox
+//= require jquery.slick
 //= require_tree .
-
-new Dropbox();
