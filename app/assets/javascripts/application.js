@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.slick
 //= require turbolinks
 //= require react
 //= require react_ujs
@@ -19,5 +20,4 @@
 //= require mustache
 //= require jquery.mustache
 //= require components
-//= require jquery.slick
 //= require_tree .

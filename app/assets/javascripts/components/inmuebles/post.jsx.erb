@@ -16,12 +16,11 @@ class Post extends React.Component {
 
 	render() {
     let post = this.props.post;
-    console.log(post);
     let images = post.images[0];
 		return(
       <div className="post">
         <div className="post-text">
-          <h1><a target="_blank" href={"inmuebles/" + post.id }>{post.title}</a></h1>
+          <h1><a href={"inmuebles/" + post.id }>{post.title}</a></h1>
         </div>
 
         <div className="post-img">

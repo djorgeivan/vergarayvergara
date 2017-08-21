@@ -2,27 +2,54 @@ class Inmuebles extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {
-			matches: []
-		}
 	}
 
-	getFilteredData(values) {
-		this.setState({
-			matches: this.props.posts.filter((post) => {
-				return post.neighborhood.trim().toLowerCase() === values.neighborhood.trim().toLowerCase();
-			})
+	getUrlvars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, (m,key,value) => {
+      vars[key] = value;
+    });
+    return vars;
+	}
+
+	format(val) {
+    return decodeURI(val).toLowerCase().trim();
+  }
+
+	checkUrl(elements, url, callback) {
+    let getUrlVars = this.getUrlvars;
+    let els = elements || [];
+    if(this.format(getUrlVars()[url]).length > 0) {
+      els = els.filter((post) => {
+        return callback(this.format(post[url]), this.format(getUrlVars()[url]));
+      });
+    }
+    return els;
+  }
+	
+	getPosts() {
+
+		let posts = this.props.posts;
+
+    posts = this.checkUrl(posts, "neighborhood", (neighborhood, neighborhoodUrl) => {
+      return neighborhood === neighborhoodUrl;
 		});
+		
+		posts = this.checkUrl(posts, "kind", (type, typeUrl) => {
+      return type === typeUrl;
+    });
+
+    return posts;
 	}
 
 	showData() {
-		if(this.state.matches.length > 0) {
-			return this.state.matches.map((post) => {
-				return <Post key={post.id} post={post} />
-			});
+		if(this.getPosts().length > 0) {
+			return this.getPosts().map((post) => {
+        return <Post key={post.id} post={post} />;
+      });
 		} else {
 			return this.props.posts.map((post) => {
-				return <Post key={post.id} post={post} />
+				return <Post key={post.id} post={post} />;
 			});
 		}
 	}
@@ -32,7 +59,8 @@ class Inmuebles extends React.Component {
 			<div className="inmuebles">
 				<div className="wraper">	
 					<Form 
-						getFilteredData={this.getFilteredData.bind(this)} />
+						data={this.props.posts}
+						getUrlvars={this.getUrlvars} />
 					<div className="post-box">
 						<div className="flex-posts">
 							{(this.props.posts.length > 0) ? this.showData() : "No hay propiedades en venta"}

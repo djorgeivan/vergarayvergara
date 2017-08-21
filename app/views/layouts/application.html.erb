@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Vergarayvergara</title>
-    <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+    <% if content_for?(:head) %>
+      <%= yield(:head) %>
+    <% end %>
   </head>
-
+  
   <body>
     <div class="container">
       <div id="dropdown" class="dropdown">
@@ -20,7 +24,7 @@
             <li><a id="link" href="/">Contacto</a></li>
             <li id="menubtn" class="btns-btn">Menu</li>
             <% if controller.action_name == "index" %>
-              <li id="formbtn" class="btns-btn">Form</li>
+            <li id="formbtn" class="btns-btn">Form</li>
             <% end %>
           </ul>
         </nav>
