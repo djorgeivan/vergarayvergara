@@ -27,7 +27,7 @@ ActiveAdmin.register Post do
   form do |f|
     f.inputs "Admin Details" do
       f.input :title
-      f.input :images, input_html: { multiple: true, id: "dropbox" } 
+      f.input :images, as: :file ,input_html: { multiple: true } 
       f.input :kind, as: :select, :selected => "Casas",  :collection => ["Casas", "Apartamentos", "Lotes", "Fincas", "Bodegas"]
       f.input :neighborhood
       f.input :area

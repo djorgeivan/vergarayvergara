@@ -20,6 +20,9 @@ gem 'cancan'
 gem 'pundit'
 gem 'draper', github: 'drapergem/draper'
 gem 'jquery-ui-rails'
+
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem "mini_magick"
 gem "jquery-slick-rails"
 
 group :development, :test do

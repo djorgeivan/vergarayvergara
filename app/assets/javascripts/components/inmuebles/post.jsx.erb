@@ -16,7 +16,8 @@ class Post extends React.Component {
 
 	render() {
     let post = this.props.post;
-    let images = post.images[0].split(",");
+    console.log(post);
+    let images = post.images[0];
 		return(
       <div className="post">
         <div className="post-text">
@@ -28,12 +29,10 @@ class Post extends React.Component {
             <li><strong>Area:</strong> {post.area} m²</li>
             <li><strong>Tipo:</strong> {post.kind}</li>
           </div>
-          <img src={images[0]} alt=""/>
+          <img src={images.thumb.url} alt=""/>
         </div>
 
-        <div className="post-price-img">
-          <%= image_tag 'sale' %>
-        </div>
+        {/*<div className="post-price-img"> <%= image_tag 'sale' %> </div> */}
         <div className="post-price">
           <strong>${this.addDots(post.price)}</strong>
         </div>

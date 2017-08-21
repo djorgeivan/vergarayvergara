@@ -18,6 +18,15 @@ GIT
       sprockets (< 4.1)
 
 GIT
+  remote: git://github.com/carrierwaveuploader/carrierwave.git
+  revision: 7389a82f17d2547766c290b6f1398c9da794353b
+  specs:
+    carrierwave (1.1.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
+
+GIT
   remote: git://github.com/drapergem/draper.git
   revision: f6a7b17a8acfa7633762d665ab218a6478d32a98
   specs:
@@ -203,6 +212,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mimemagic (0.3.2)
+    mini_magick (4.8.0)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
@@ -326,6 +336,7 @@ DEPENDENCIES
   activemodel-serializers-xml!
   byebug
   cancan
+  carrierwave!
   coffee-rails (~> 4.2)
   devise
   draper!
@@ -337,6 +348,7 @@ DEPENDENCIES
   jquery-slick-rails
   jquery-ui-rails
   listen (~> 3.0.5)
+  mini_magick
   mustache-js-rails
   normalize-rails
   paperclip!

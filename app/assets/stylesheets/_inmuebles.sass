@@ -27,7 +27,7 @@
 		
 
 .wraper
-	background-color: #dfdfdf
+	background-color: #f8f8f8
 	display: table
 	width: 100%
 
@@ -54,7 +54,7 @@ form, .post-box
 
 	a
 		text-decoration: none
-		color: black
+		color: #4b4b4b
 
 	&-features
 		transition: .5s ease-out
@@ -130,7 +130,7 @@ form, .post-box
 	overflow: hidden
 	transition: 1s ease
 	&-group
-		margin-bottom: 3em
+		margin-bottom: 3.2em
 		height: 4em
 	&-box
 		padding-top: 2em
@@ -141,12 +141,13 @@ form, .post-box
 	height: .2em !important
 
 form
-	color: black
 	padding: 2em 
 	width: 27%
 	font-size: 15px
 	text-align: center
 	font-family: 'mc'
+	color: #595959
+	text-shadow: 0.5px 0.5px 3px #e3e3e3
 
 	p
 		margin-top: 1em
@@ -163,10 +164,15 @@ form
 		border-radius: 10px 
 		height: 2em
 		border: none
-
+	
 	input[type=range]
-		height: 20px
-		border: none
+	height: 20px
+	border: none
+	
+	input[type=text], .slider, select
+		color: #595959
+		border: 1px solid #dddddd
+		box-shadow: 5px 5px 0px #ededed
 
 	input[type=button]
 		color: white

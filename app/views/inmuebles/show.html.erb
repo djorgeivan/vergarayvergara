@@ -2,8 +2,8 @@
 <div class="fill dark">
   <div class="center center-el">
     <div class="fade">
-      <% split(@post).each do |image_link| %>
-        <div><%= image_tag image_link, class: "slider-img" %></div>
+      <% @post.images.each do |post| %>
+        <div><%= image_tag post.url, class: "slider-img" %></div>
       <% end %>
     </div>
   </div>

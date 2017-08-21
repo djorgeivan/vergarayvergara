@@ -4,11 +4,11 @@ class InmueblesController < ApplicationController
   end
 
   def show
-    @post = article_id
+    @post = post_id
   end
 
   private
-    def article_id
+    def post_id
       Post.find(params[:id])
     end
 end
