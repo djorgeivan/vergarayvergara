@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170715182607) do
+ActiveRecord::Schema.define(version: 20170828172035) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -56,10 +56,10 @@ ActiveRecord::Schema.define(version: 20170715182607) do
     t.float    "price"
     t.text     "details"
     t.integer  "phone"
-    t.integer  "landline"
+    t.integer  "landline",     limit: 10
     t.string   "type"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "neighborhood"
     t.string   "kind"
     t.string   "images"
