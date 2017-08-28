@@ -10,6 +10,14 @@ class Form extends React.Component {
 		}
 	}
 
+	getUrlvars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, (m,key,value) => {
+      vars[key] = value;
+    });
+    return vars;
+	}
+
 	slider(id, props) {
 		$('#' + id).slider(props).bind(this);
 	}
@@ -54,8 +62,8 @@ class Form extends React.Component {
 	}
 	
 	setDefaultValue(value) {
-    if(this.props.getUrlvars()[value]) {
-      return decodeURI(this.props.getUrlvars()[value]).trim();
+    if(this.getUrlvars()[value]) {
+      return decodeURI(this.getUrlvars()[value]).split("+").join(" ").trim();
     } 
   }
 

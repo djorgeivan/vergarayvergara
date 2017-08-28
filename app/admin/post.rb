@@ -17,6 +17,7 @@ ActiveAdmin.register Post do
     attributes_table do
       row :title
       row :price
+      row :neighborhood
       row :kind
     end
 

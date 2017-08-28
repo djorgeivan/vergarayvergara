@@ -1,4 +1,4 @@
-class Inmuebles extends React.Component {
+/*class Inmuebles extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -55,6 +55,7 @@ class Inmuebles extends React.Component {
 	}
 	
 	render() {
+		
 		return(
 			<div className="inmuebles">
 				<div className="wraper">	
@@ -70,4 +71,4 @@ class Inmuebles extends React.Component {
 			</div>
 		);
 	}
-}
+}*/

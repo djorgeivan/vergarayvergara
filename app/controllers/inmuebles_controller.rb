@@ -1,7 +1,11 @@
 class InmueblesController < ApplicationController
+  has_scope :neighborhood
+  has_scope :kind
+  
   def index
-    @posts = Post.all
+    @posts = apply_scopes(Post).all
   end
+  
 
   def show
     @post = post_id

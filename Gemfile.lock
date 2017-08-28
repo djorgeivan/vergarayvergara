@@ -343,6 +343,7 @@ DEPENDENCIES
   guard-bundler
   guard-livereload
   guard-rails
+  has_scope (~> 0.7.0)
   jbuilder (~> 2.5)
   jquery-rails
   jquery-slick-rails
