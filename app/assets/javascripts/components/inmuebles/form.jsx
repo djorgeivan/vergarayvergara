@@ -129,13 +129,13 @@ class Form extends React.Component {
 					<select 
 						name="inmuebles"
 						selected={this.setDefaultValue("type")}
-						ref={(input) => { this.kind = input }}>
-						
-							<option value="casas">Casas</option>
-							<option value="apartamentos">Apartamentos</option>
-							<option value="lotes">Lotes</option>
-							<option value="fincas">Fincas</option>
-							<option value="bodegas">Bodegas</option>
+						ref={(input) => { this.kind = input }}
+						defaultValue="">
+							<option value="casa"> -- Casa -- </option>
+							<option value="apartamento"> -- Apartamento -- </option>
+							<option value="lote"> -- Lote --</option>
+							<option value="finca"> -- Finca -- </option>
+							<option value="bodega"> -- Bodega -- </option>
 					</select>
 
 					<div className="form-group">

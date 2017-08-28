@@ -29,7 +29,7 @@ ActiveAdmin.register Post do
     f.inputs "Admin Details" do
       f.input :title
       f.input :images, as: :file ,input_html: { multiple: true } 
-      f.input :kind, as: :select, :selected => "Casas",  :collection => ["Casas", "Apartamentos", "Lotes", "Fincas", "Bodegas"]
+      f.input :kind, as: :select, :selected => "Casas",  :collection => ["Casa", "Apartamento", "Lote", "Finca", "Bodega"]
       f.input :neighborhood
       f.input :area
       f.input :price
