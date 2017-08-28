@@ -20,7 +20,7 @@ gem 'cancan'
 gem 'pundit'
 gem 'draper', github: 'drapergem/draper'
 gem 'jquery-ui-rails'
-#gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate', '~> 3.1.0'
 gem 'has_scope', '~> 0.7.0'
 
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'

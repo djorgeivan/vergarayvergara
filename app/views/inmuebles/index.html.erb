@@ -1,32 +1,36 @@
 <div class="inmuebles">
-    <div class="wraper">
-      <%= react_component('Form',
-      { posts: @posts }) %>
-      <div class="post-box">
-        <div class="flex-posts">
-          <% @posts.each do |post| %>
-            <div class="post">
-              <div class="post-text">
-                <h1><%= link_to post.title, "/inmuebles/#{post.id}" %></h1>
-              </div>
-  
-              <div class="post-img">
-                <div class="post-features">
-                  <li><strong>Area:</strong> <%= post.area %> m²</li>
-                  <li><strong>Tipo:</strong> <%= post.kind %></li>
-                </div>
-                <%= image_tag post.images[0].thumb.url %>
-              </div>
-      
-              <div class="post-price">
-                <strong><%= post.price %></strong>
-              </div>
+  <div class="wraper">
+    <%= react_component('Form',
+    { posts: @posts }) %>
+    <div class="post-box">
+      <div class="flex-posts">
+        <% @posts.each do |post| %>
+          <div class="post">
+            <div class="post-text">
+              <h1><%= link_to post.title, "/inmuebles/#{post.id}" %></h1>
             </div>
-          <% end %>
-        </div>
+
+            <div class="post-img">
+              <div class="post-features">
+                <li><strong>Area:</strong> <%= post.area %> m²</li>
+                <li><strong>Tipo:</strong> <%= post.kind %></li>
+              </div>
+              <%= image_tag post.images[0].thumb.url %>
+            </div>
+    
+            <div class="post-price">
+              <strong><%= post.price %></strong>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
+</div>
+
+<div class="paginate">
+  <%= will_paginate @posts %>
+</div>
 
 
 
