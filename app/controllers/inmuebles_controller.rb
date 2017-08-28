@@ -4,7 +4,7 @@ class InmueblesController < ApplicationController
   
   def index
     @posts = apply_scopes(Post).all.order("created_at DESC")
-    @posts = @posts.paginate(page: params[:page], per_page: 2)
+    @posts = @posts.paginate(page: params[:page], per_page: 12)
   end
   
 

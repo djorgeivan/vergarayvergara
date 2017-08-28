@@ -19,7 +19,7 @@
             </div>
     
             <div class="post-price">
-              <strong><%= post.price %></strong>
+              <strong><%= number_to_currency(post.price, precision: 0) %></strong>
             </div>
           </div>
         <% end %>
