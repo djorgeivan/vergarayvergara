@@ -138,6 +138,8 @@ GEM
     eventmachine (1.2.3)
     execjs (2.7.0)
     ffi (1.9.18)
+    figaro (1.1.1)
+      thor (~> 0.14)
     formatador (0.2.5)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
@@ -347,6 +349,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   draper!
+  figaro
   guard-bundler
   guard-livereload
   guard-rails
