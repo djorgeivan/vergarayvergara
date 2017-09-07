@@ -152,7 +152,7 @@ form
   text-align: center
   font-family: 'mc'
   color: #595959
-  text-shadow: 0.5px 0.5px 3px #e3e3e3
+  text-shadow: 0.5px 0.5px 3px rgba(0,0,0,.1) 
 
   p
     margin-top: 1em
@@ -172,22 +172,21 @@ form
     padding-bottom: 5px
     margin: .5em 0
     border-radius: 10px 
-    height: 2em
     border: none
-  
+    
   input[type=range]
+    height: 2em
     height: 20px
     border: none
   
   input[type=text], .slider, select
-    color: #595959
+    height: 2em
+    color: rgba(0,0,0,.8) 
     border: 1px solid #dddddd
     box-shadow: 5px 5px 0px #ededed
-
-  input[type=button]
-    color: white
-    background: linear-gradient(#cacaca, #b6b6b6)
-    box-shadow: 1px 1px 5px #c2c2c2
+  input[type=submit] 
+    background-color: rgba(0,0,0,.1) 
+    
 .post-box
   width: 73%
 

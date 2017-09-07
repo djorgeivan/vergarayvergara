@@ -1,0 +1,17 @@
+<section>
+  <div class="center">
+    <%= simple_form_for @contact, :html => {:class => 'contact' } do |f| %>
+      <h3>Contacto</h3>
+      <%= f.input :name, :required => true, placeholder: "nombre" %>
+      
+      <%= f.input :email, :required => true, placeholder: "Correo electronico" %>
+      
+      <%= f.input :message, :as => :text, :required => true %>
+      
+      <div class= "hidden">
+        <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+      </div>
+      <%= f.button :submit, 'Enviar correo electronico'%>
+    <% end %>
+  </div>
+</section>
