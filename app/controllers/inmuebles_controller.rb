@@ -1,6 +1,7 @@
 class InmueblesController < ApplicationController
   has_scope :neighborhood
   has_scope :kind
+  has_scope :area
   
   def index
     @posts = apply_scopes(Post).all.order("created_at DESC")

@@ -3,7 +3,7 @@ class Form extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			area: 20,
+			area: 2,
 			priceMin: 1,
 			priceMax: 30,
 			toggle: false
@@ -55,7 +55,7 @@ class Form extends React.Component {
 
   componentDidMount() {
 		let values = this.state;
-		this.addMinSlider("slider-range-min", 1, 90, values.area);
+		this.addMinSlider("slider-range-min", 1, 5, values.area);
 		this.addSlider("slider", 1, 90, [values.priceMin, values.priceMax]);
 
 		this.toggleButton();
@@ -72,7 +72,7 @@ class Form extends React.Component {
 		let city = this.city.value,
 				neighborhood = this.neighborhood.value
 				kind = this.kind.value;
-				area = this.state.area
+				area = this.showArea(this.state.area, 5);
 				priceMax = this.state.priceMax,
 				priceMin = this.state.priceMin;
     window.location = "http://localhost:3000/inmuebles/?" + 
@@ -104,6 +104,16 @@ class Form extends React.Component {
 
 	toggleFilter() {
 		return (this.state.toggle) ? 'showForm' : 'hideForm';
+	}
+
+
+	areaText() {
+
+		if(this.showArea(this.state.area, 5) < 500) {
+			return <p>Area de hasta: </p>
+		} else {
+			return <p>Area mayor a: </p>
+		}
 	}
 
 	render() {
@@ -139,7 +149,7 @@ class Form extends React.Component {
 					</select>
 
 					<div className="form-group">
-						<p>Area: {this.showArea(this.state.area, 90)} m²</p>
+						<div> {this.areaText()} {this.showArea(this.state.area, 5)} m²</div>
 						<div className="slider" id="slider-range-min"></div>
 					</div>
 
