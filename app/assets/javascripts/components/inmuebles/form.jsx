@@ -116,6 +116,16 @@ class Form extends React.Component {
 		}
 	}
 
+	addDots(number) {
+		let array_number = number.toString().split("");
+		 for(let i = (array_number.length - 1); i > 0 ; i--) {
+			 if(i % 3 === 0) {
+				 array_number.splice((i), 0, ",");
+			 }
+		 }
+		return array_number.join("");
+	 }
+
 	render() {
 		return(
 			<div className={ 'form ' + this.toggleFilter() }>
@@ -154,8 +164,8 @@ class Form extends React.Component {
 					</div>
 
 					<div className="form-group">
-						<p>Precio: ${this.showPrice(this.state.priceMin, 1)} - 
-											 ${this.showPrice(this.state.priceMax, 90)} COP</p>
+						<p>Precio: ${this.addDots(this.showPrice(this.state.priceMin, 1))} - 
+											 ${this.addDots(this.showPrice(this.state.priceMax, 90))} COP</p>
 						<div className="slider" id="slider"></div>
 					</div>
 		
