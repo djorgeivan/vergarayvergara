@@ -14,14 +14,19 @@
 
 
 <div class="content-show">
-  <div class="content-post">
+  <div class="content-post padding-bottom-5">
     <h1><%= @post.title %></h1>
 
-    <div class="price">
-      <h3><%= number_to_currency @post.price, precision: 0 %></h3>
+    <div class="padding-05 content relative">
+      <div class="price absolute padding-left-3 left">
+        <h3><%= number_to_currency @post.price, precision: 0 %></h3>
+      </div>
+      <div class="absolute padding-right-3 right">
+        <h4>Contacto</h4>
+        <p class="phone"><%= number_to_phone(@post.phone, area_code: true) %></p>
+        <p class="padding-top-05 phone"><%= number_to_phone(@post.landline) %></p>
+      </div>
     </div>
-
-    
   </div>
 
   <div class="padding-1 relative odd-list">
