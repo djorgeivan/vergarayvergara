@@ -2,7 +2,7 @@ ActiveAdmin.register Post do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-  permit_params :title, :neighborhood, :area, :price, :details, :phone, :landline, :kind, images: []
+  permit_params :title, :neighborhood, :area, :price, :rooms, :bathrooms, :details, :phone, :landline, :kind, images: []
 
   index do 
     column :title
@@ -27,15 +27,17 @@ ActiveAdmin.register Post do
   
   form do |f|
     f.inputs "Admin Details" do
-      f.input :title
+      f.input :title, placeholder: "Ej: Venta de casa en ..."
       f.input :images, as: :file ,input_html: { multiple: true } 
       f.input :kind, as: :select, :selected => "Casas",  :collection => ["Casa", "Apartamento", "Lote", "Finca", "Bodega"]
-      f.input :neighborhood
-      f.input :area
-      f.input :price
-      f.input :details
-      f.input :phone
-      f.input :landline
+      f.input :rooms, placeholder: "Cantidad de cuartos"
+      f.input :bathrooms, placeholder: "Cantidad de baños"
+      f.input :neighborhood, placeholder: "Barrio de ubicación"
+      f.input :area, placeholder: "Ej: 150 (no agregue letras a este campo)"
+      f.input :price, placeholder: "Ej 350000000 (no agregue puntos o comas)"
+      f.input :details, placeholder: "Breve descripción del inmueble"
+      f.input :phone, placeholder: "Telefono celular (no agregue espacios)"
+      f.input :landline, placeholder: "Telefono fijo (no agregue espacios)"
     end
     f.actions
   end
