@@ -12,12 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
+//= require gmaps/google
 //= require turbolinks
 //= require jquery.slick
 //= require react
 //= require react_ujs
 //= require jquery-ui
-//= require mustache
-//= require jquery.mustache
 //= require components
 //= require_tree .

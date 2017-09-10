@@ -36,9 +36,9 @@
       <p class="absolute padding-right-3 right"> <%= @post.neighborhood.capitalize %> </p>
     </div>
   </div>
-  
+
   <div class="padding-1 relative odd-list">
-      
+
     <div class="padding-05">
       <p class="absolute padding-left-3 left"> Inmueble </p>
       <p class="absolute padding-right-3 right"> <%= @post.kind.capitalize %> </p>
@@ -55,7 +55,7 @@
 
 
   <div class="padding-1 relative odd-list">
-      
+
     <div class="padding-05">
       <p class="absolute padding-left-3 left"> Cuartos </p>
       <p class="absolute padding-right-3 right"> <%= @post.rooms %> </p>
@@ -63,7 +63,7 @@
   </div>
 
   <div class="padding-1 relative odd-list">
-    
+
     <div class="padding-05">
       <p class="absolute padding-left-3 left"> Baños </p>
       <p class="absolute padding-right-3 right"> <%= @post.bathrooms %> </p>
@@ -73,10 +73,21 @@
   <article class="padding-top-2 padding-bottom-2">
     <h2 class="padding-bottom-1 padding-top-1">Otros detalles</h2>
     <p><%= @post.details %></p>
+
   </article>
 
+  <div style='width: 800px;' class="margin-bottom-2">
+    <div id="map" style='width: 800px; height: 400px;'></div>
+  </div>
+
+  <script type="text/javascript">
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.map.centerOn(markers[0]);
+      handler.getMap().setZoom(17);
+    });
+  </script>
+
 </div>
-
-
-
-
