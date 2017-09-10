@@ -22,10 +22,10 @@
             <li><a id="link" href="/inmuebles">Inmuebles</a></li>
             <li><a id="link" href="/">Sobre nosotros</a></li>
             <li><a id="link" href="/contacts/new">Contacto</a></li>
-            <li id="menubtn" class="btns-btn">Menu</li>
             <% if controller.action_name == "index" %>
-              <li id="formbtn" class="btns-btn">Form</li>
+            <li id="formbtn" class="btns-btn flaticon-filter-tool-black-shape"></li>
             <% end %>
+            <li id="menubtn" class="btns-btn flaticon-bars"></li>
           </ul>
         </nav>
         <%= yield %>

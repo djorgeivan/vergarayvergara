@@ -4,7 +4,7 @@ class Form extends React.Component {
 		super(props);
 		this.state = {
 			area: 2,
-			priceMin: 1,
+			priceMin: 10,
 			priceMax: 30,
 			toggle: false
 		}
@@ -56,7 +56,7 @@ class Form extends React.Component {
   componentDidMount() {
 		let values = this.state;
 		this.addMinSlider("slider-range-min", 1, 5, values.area);
-		this.addSlider("slider", 1, 90, [values.priceMin, values.priceMax]);
+		this.addSlider("slider", 10, 90, [values.priceMin, values.priceMax]);
 
 		this.toggleButton();
 	}
@@ -164,8 +164,8 @@ class Form extends React.Component {
 					</div>
 
 					<div className="form-group">
-						<p>Precio: ${this.addDots(this.showPrice(this.state.priceMin, 1))} - 
-											 ${this.addDots(this.showPrice(this.state.priceMax, 90))} COP</p>
+						<p>${this.addDots(this.showPrice(this.state.priceMin, 10))} - 
+						   ${this.addDots(this.showPrice(this.state.priceMax, 90))} COP</p>
 						<div className="slider" id="slider"></div>
 					</div>
 		
