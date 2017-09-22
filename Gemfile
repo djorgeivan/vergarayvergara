@@ -26,6 +26,7 @@ gem 'has_scope', '~> 0.7.0'
 gem 'mail_form'
 gem 'simple_form'
 gem 'figaro'
+gem "fog-aws"
 
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem "mini_magick"
