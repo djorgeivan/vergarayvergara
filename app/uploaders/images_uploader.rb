@@ -12,7 +12,6 @@ class ImagesUploader < CarrierWave::Uploader::Base
     storage :file
   end
 
-  include CarrierWave::MimeTypes
   process :set_content_type
 
   # Override the directory where uploaded files will be stored.
