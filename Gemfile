@@ -13,10 +13,10 @@ gem 'normalize-rails'
 gem 'redcarpet', '~> 3.0.0'
 gem 'react-rails'
 gem 'mustache-js-rails'
-gem 'activeadmin', github: 'activeadmin'  
+gem 'activeadmin', github: 'activeadmin'
 gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
 gem 'devise'
-gem 'cancan' 
+gem 'cancan'
 gem 'pundit'
 gem 'draper', github: 'drapergem/draper'
 gem 'jquery-ui-rails'
@@ -26,10 +26,13 @@ gem 'has_scope', '~> 0.7.0'
 gem 'mail_form'
 gem 'simple_form'
 gem 'figaro'
+gem "fog-aws"
 
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem "mini_magick"
 gem "jquery-slick-rails"
+gem 'gmaps4rails'
+gem 'underscore-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -47,7 +50,7 @@ group :development do
   gem 'guard-livereload'
 	gem 'rack-livereload'
 	gem 'guard-bundler'
-  
+
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
