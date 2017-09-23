@@ -60,11 +60,11 @@ class Form extends React.Component {
 
 		this.toggleButton();
 	}
-	
+
 	setDefaultValue(value) {
     if(this.getUrlvars()[value]) {
       return decodeURI(this.getUrlvars()[value]).split("+").join(" ").trim();
-    } 
+    }
   }
 
 	sendFilteredData(e) {
@@ -75,14 +75,14 @@ class Form extends React.Component {
 				area = this.showArea(this.state.area, 5);
 				priceMax = this.state.priceMax,
 				priceMin = this.state.priceMin;
-    window.location = "http://localhost:3000/inmuebles/?" + 
+    window.location = "http://www.vergarayvergara.com/inmuebles/?" +
                       "city=" + encodeURIComponent(city) + "&" +
 											"neighborhood=" + encodeURIComponent(neighborhood) + "&" +
-											"kind=" + encodeURIComponent(kind) + "&" + 
-											"area=" + encodeURIComponent(area) + "&" + 
-											"priceMax=" + encodeURIComponent(priceMax) + "&" + 
+											"kind=" + encodeURIComponent(kind) + "&" +
+											"area=" + encodeURIComponent(area) + "&" +
+											"priceMax=" + encodeURIComponent(priceMax) + "&" +
 											"priceMin=" + encodeURIComponent(priceMin);
-		
+
 	}
 
 	showPrice(price, value) {
@@ -133,20 +133,20 @@ class Form extends React.Component {
 					<h3>Filtros</h3>
 
 					<div className="form-group">
-						<input 
-							type="text" 
-							placeholder="Ciudad" 
+						<input
+							type="text"
+							placeholder="Ciudad"
 							defaultValue={this.setDefaultValue("city")}
 							ref={(input) => { this.city = input } }/>
 
-						<input 
-							type="text" 
+						<input
+							type="text"
 							placeholder="Barrio"
 							defaultValue={this.setDefaultValue("neighborhood")}
 							ref={(input) => { this.neighborhood = input }} />
 					</div>
 
-					<select 
+					<select
 						name="inmuebles"
 						selected={this.setDefaultValue("type")}
 						ref={(input) => { this.kind = input }}
@@ -164,11 +164,11 @@ class Form extends React.Component {
 					</div>
 
 					<div className="form-group">
-						<p>${this.addDots(this.showPrice(this.state.priceMin, 10))} - 
+						<p>${this.addDots(this.showPrice(this.state.priceMin, 10))} -
 						   ${this.addDots(this.showPrice(this.state.priceMax, 90))} COP</p>
 						<div className="slider" id="slider"></div>
 					</div>
-		
+
 					<input type="submit" value="Buscar"/>
 				</form>
 			</div>
